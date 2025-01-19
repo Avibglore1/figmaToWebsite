@@ -5,3 +5,175 @@
     --light-color: #E8F7FB;
     --light-blue-color: #6F7DFB;
 }
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+}
+/* button */
+.btn{
+border-radius: 24px;
+/* removed height and width which
+was in figma */
+padding: 16px 32px;
+color: #fff;
+display: inline-block;
+font-size: 18px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.btn.dark{
+    background: var(--dark-blue-color);
+}
+
+.btn.light{
+    background: var(--orange-color);
+}
+
+.btn.enrol-icon::before{
+    content: url('./Images/pencil-svg.svg');
+    padding: 1px;
+}
+
+.wrapper{
+    max-width: 1134px;
+    margin: 0 auto;
+    outline: 1px solid red;
+}
+
+/* header */
+header{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    width: 1134px;
+    z-index: 1;
+}
+
+nav .logo{
+    color: #fff;
+    font-weight: 900;
+    font-size: 40px;
+    font-family: "Raleway", sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+}
+
+nav ul li a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* hero-section */
+
+.hero-section{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section .left h1{
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hero-section .left p{
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 457px;
+}
+
+.hero-section .left{
+    flex: 1;
+}
+
+.hero-section .right img{
+    height: 500px;
+}
+
+.hero-section .right{
+    align-self: flex-end;
+}
+
+
+.achievement-card{
+    position: absolute;
+    min-width: 200px;
+}
+
+.achievement-card .content{
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 8px 32px;
+    position: relative;
+    z-index: 5;
+}
+
+.achievement-card.students-enrolled{
+    left: 46%;
+    top: 200px;
+}
+
+.achievement-card h3{
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--dark-blue-color);
+    text-align: center;
+}
+
+.achievement-card p{
+    font-size: 16px;
+    color: var(--dark-blue-color);
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.achievement-card .bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 8px;
+    left: 8px;
+    background: linear-gradient(180deg, #6F7DFB 0%, #3b448f 100%);
+    border-radius: 24px;
+    z-index: 1;
+}
+
+.achievement-card.overall-rating{
+    left: 45%;
+    top: 400px;
+}
+
+.achievement-card .content div{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
